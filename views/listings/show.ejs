@@ -1,6 +1,6 @@
 <% layout("/layouts/boilerplate") %>
 <script>
-    const listing = <%- JSON.stringify(listing) %>;
+    let listing = `<%- JSON.stringify(listing) %>`;
 
 </script>
 <div class="row mt-3 show-container">
@@ -15,7 +15,7 @@
         </div>
         <div class="card-body">
             <p class="card-text"> <b>Owned by : </b><i>
-                    @<%= listing.owner.username %>
+                    @<%= listing.owner.username%>
                 </i> </p>
             <p class="card-text">
                 <b>Description : </b>
@@ -120,5 +120,6 @@
             </div>
             <% } %>
         </div>
-
+    <hr style="margin: 10px 0px;">
 </div>
+
